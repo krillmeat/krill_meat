@@ -1,0 +1,33 @@
+@keyframes pointerFinger{
+  0%{ transform: translate(0,0) }
+ 50%{transform: translate(-5px,0)}
+100%{ transform: translate(0,0) }
+}
+
+@keyframes jiggleSvg{
+  0%{ transform: translate(0,0) }
+ 25%{ transform: translate(-.25px,.25px) }
+ 50%{ transform: translate(.25px,.25px) }
+ 75%{ transform: translate(.25px,-.25px) }
+100%{ transform: translate(0,0) }
+}
+
+@keyframes shakeyLines{
+  0%{ transform: translate(0,0) rotate(0deg) }
+ 25%{ transform: translate(-.25px,.25px) rotate(.04deg) }
+ 50%{ transform: translate(.25px,.25px) rotate(0deg) }
+ 75%{ transform: translate(.25px,-.25px) rotate(-.04deg) }
+100%{ transform: translate(0,0) rotate(0deg) }
+}
+
+@keyframes pulseLine{
+  0%{ stroke-width: 12px }
+ 50%{ stroke-width: 16px }
+100%{ stroke-width: 12px }
+}
+
+@keyframes pulseLineThin{
+  0%{ stroke-width: 7px }
+ 50%{ stroke-width: 12px }
+100%{ stroke-width: 7px }
+}
