@@ -31,3 +31,34 @@
  50%{ stroke-width: 12px }
 100%{ stroke-width: 7px }
 }
+
+.draw-zone .doodle[data-current='krill'] svg{ animation: jiggleSvg .1s linear 0s infinite }
+.draw-zone .doodle[data-current='krill'] svg .s:nth-of-type(1n){ animation: pulseLine 5s linear 0s infinite, shakeyLines .1s linear 0s infinite }
+.draw-zone .doodle[data-current='krill'] svg .s:nth-of-type(2n){ animation: pulseLine 5s linear 0s infinite, shakeyLines .15s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='krill'] svg .s:nth-of-type(3n){ animation: pulseLine 5s linear 0s infinite, shakeyLines .2s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='krill'] svg .s:nth-of-type(4n){ animation: pulseLine 5s linear 0s infinite, shakeyLines .15s linear 0s infinite}
+.draw-zone .doodle[data-current='krill'] svg .s:nth-of-type(5n){ animation: pulseLine 5s linear 0s infinite, shakeyLines .25s linear 0s infinite}
+
+.draw-zone .doodle[data-current='worm'] svg{ animation: jiggleSvg .1s linear 0s infinite }
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(1n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .1s linear 0s infinite }
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(2n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(3n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .2s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(4n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite}
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(5n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .25s linear 0s infinite}
+.draw-zone .doodle[data-current='worm'] svg .s:nth-of-type(7n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .3s linear 0s infinite backwards}
+
+.draw-zone .doodle[data-current='sunshine'] svg{ animation: jiggleSvg .1s linear 0s infinite }
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(1n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .1s linear 0s infinite }
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(2n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(3n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .2s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(4n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite}
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(5n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .25s linear 0s infinite}
+.draw-zone .doodle[data-current='sunshine'] svg .s:nth-of-type(7n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .3s linear 0s infinite backwards}
+
+.draw-zone .doodle[data-current='smiles'] svg{ animation: jiggleSvg .1s linear 0s infinite }
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(1n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .1s linear 0s infinite }
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(2n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(3n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .2s linear 0s infinite backwards}
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(4n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .15s linear 0s infinite}
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(5n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .25s linear 0s infinite}
+.draw-zone .doodle[data-current='smiles'] svg .s:nth-of-type(7n){ animation: pulseLineThin 5s linear 0s infinite, shakeyLines .3s linear 0s infinite backwards}
