@@ -27,9 +27,9 @@
 }
 
 @keyframes pulseLineThin{
-  0%{ stroke-width: 7px }
+  0%{ stroke-width: 8px }
  50%{ stroke-width: 12px }
-100%{ stroke-width: 7px }
+100%{ stroke-width: 8px }
 }
 
 .draw-zone .doodle[data-current='krill'] svg{ animation: jiggleSvg .1s linear 0s infinite }

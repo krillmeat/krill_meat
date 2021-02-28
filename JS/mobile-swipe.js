@@ -1,5 +1,5 @@
 class TOUCHSWIPE{
-  constructor(elem, slideElem){
+  constructor(elem, slideElem, effectCallback){
     this._elem = elem;                        // The element to enable touchswipe on
     this._slideElem = slideElem || this.elem; // The element to slide, does not have to be the same element as the input
     this._startCoordinates = [0,0];           // Starting coordinates for the touch event
@@ -7,6 +7,7 @@ class TOUCHSWIPE{
     this._moveDelta = 0;                      // The amount of movement between the start and current points
     this._enabled = true;                     // If the Touch Event is currently allowed
     this._moveHappened = false;               // A check to see if the touchmove event was triggered
+    this._effectCallback = effectCallback;    // Callback function that is triggered when the swipe happens : Must Accept Object
 
     this.buildMobileSwipe();
   }
@@ -31,14 +32,14 @@ class TOUCHSWIPE{
   }
 
   touchEndHandle(e){
+    let previousClassList = this.slideElem.classList;
     if(debug) debug.debugLog("EVENT [touchend] :: Delta = "+this.moveDelta);
-    let nextSlide;
     if(this.moveHappened){ // This check has to be here to prevent a "click" as counting as a move
       if(Math.abs(this.moveDelta[0]) >= 50 ){ // The move window, how long it takes before it counts as a "swipe"
         if(this.moveDelta[0] > 0){
-          svgStage.currentSlideIndex === 0 ? svgStage.switchSvg(svgStage.doodleNames[svgStage.doodleNames.length-1]) : svgStage.switchSvg(svgStage.doodleNames[svgStage.currentSlideIndex-1]);
+          this.effectCallback({direction: 'left'});
         } else{
-          svgStage.currentSlideIndex === svgStage.doodleNames.length-1 ? svgStage.switchSvg(svgStage.doodleNames[0]) : svgStage.switchSvg(svgStage.doodleNames[svgStage.currentSlideIndex+1]);
+          this.effectCallback({direction: 'right'});
         }
         this.slideElem.style.transform = "translateX(0px)";
       } else{
@@ -72,6 +73,7 @@ class TOUCHSWIPE{
   get currX(){ return this._currCoordinates[0] }
   get currY(){ return this._currCoordinates[1] }
   get moveHappened(){ return this._moveHappened }
+  get effectCallback(){ return this._effectCallback }
 
   
   /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
