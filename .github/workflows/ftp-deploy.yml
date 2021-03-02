@@ -15,6 +15,7 @@ jobs:
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.rossdanielconover.com/public_html/KRILL_MEAT
+          server: ftp.rossdanielconover.com
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
+          server-dir: /public_html/KRILL_MEAT/
