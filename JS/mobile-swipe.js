@@ -43,7 +43,7 @@ class TOUCHSWIPE{
    * ----------------------------------------------------------------------
    */
   touchStartHandle(e){
-    if(debug) debug.debugLog("EVENT [touchstart] :: Start point = "+e.touches[0].clientX+" , "+e.touches[0].clientY);
+    debug?.debugLog("EVENT [touchstart] :: Start point = "+e.touches[0].clientX+" , "+e.touches[0].clientY);
 
     // Clear existing Deltas and Set the Starting Point
     this.moveDelta = [0,0];
@@ -79,7 +79,7 @@ class TOUCHSWIPE{
    * ----------------------------------------------------------------------
    */
   touchEndHandle(e){
-    if(debug) debug.debugLog("EVENT [touchend] :: Delta = "+this.moveDelta);
+    debug?.debugLog("EVENT [touchend] :: Delta = "+this.moveDelta);
 
     // If the Delta is past a certain number, check which direction from the start the end coordinates are, then send the direction to the Callback Function
     if(this.moveHappened){  // This check has to be here to prevent a "click" as counting as a move
