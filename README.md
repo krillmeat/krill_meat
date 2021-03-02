@@ -7,3 +7,5 @@ This page utilized quite a bit of different JS to make things work. The page its
 **MOBILE SWIPE :**  I built a basic JS swipe functionality for the mobile version of the site.
 
 **SVG MANAGER :** Because I wanted to have the SVGs be dynamically loaded, I built a manager for that. It matches SVG elements in the HTML to an SVG JS Object, and fills them in appropriately
+
+**SHOPPING :** Created a basic Product Database and a Cart to work with the Products
