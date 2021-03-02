@@ -74,7 +74,7 @@ function setupDebug(){
  */
 function gotoProducts(e){
   debug?.debugLog("EVENT [click] :: Go to Products...");
-  document.body.dataset.state = "shop";
+  document.body.dataset.state !== 'shop' ? document.body.dataset.state = "shop" : document.body.dataset.state = "home";
 }
 
 /**

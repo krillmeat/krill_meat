@@ -253,8 +253,7 @@ nav.doodle-selector ul.mobile-selector{
   width: 100%;
 }
 
-nav.doodle-selector ul.mobile-selector li{ margin: 0 4px;
-}
+nav.doodle-selector ul.mobile-selector li{ margin: 0 4px }
 
 nav.doodle-selector ul.mobile-selector li button{
   border: none;
@@ -284,8 +283,9 @@ nav.doodle-selector ul.mobile-selector li button[data-status='selected']{
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 .shop-zone{
-  width: 100%;
-  height: 0;
+  width: calc(100% - 24px);
+  height: 0vh;
+  margin: 0 8px 0 16px;
   overflow: hidden;
   transition: height .2s linear;
 }
@@ -319,7 +319,7 @@ body[data-state='shop'] .shop-zone{
 ::::::::::::::::::::                                                                         ::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-.right-button{
+.point-to-shop{
   position: fixed;
   display: flex;
     justify-content: center;
@@ -329,9 +329,13 @@ body[data-state='shop'] .shop-zone{
   width: 100%;
   height: 64px;
   z-index: 999;
+
+  transition: justify-content .2s linear;
 }
 
-.right-button button{
+body[data-state='shop'] .point-to-shop{ justify-content: flex-start }
+
+.point-to-shop button{
   padding: 8px;
   border: none;
   background: none;
@@ -339,21 +343,21 @@ body[data-state='shop'] .shop-zone{
 }
 
 @media (min-width: 800px){
-  .right-button button:hover{
+  .point-to-shop button:hover{
     animation: pointerFinger .5s linear 0s infinite
   }
 }
 
-body[data-state='shop'] .right-button button{
+body[data-state='shop'] .point-to-shop button{
 transform: rotate(180deg);
 }
 
-.right-button button svg{
+.point-to-shop button svg{
 width: 56px;
 transform: rotate(90deg);
 }
 
-.right-button button svg path{
+.point-to-shop button svg path{
 stroke-width: 24px;
 stroke-linecap: round;
 }
@@ -364,7 +368,7 @@ stroke-linecap: round;
 ::::::::::::::::::::                                                                         ::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
-body[data-state='shop'] .shop-zone .product{
+.shop-zone .product{
   display: block;
   width: calc(100% - 8px);
   height: 364px;
@@ -374,7 +378,7 @@ body[data-state='shop'] .shop-zone .product{
   transition: height .1s linear, padding-top .1s linear;
 }
 
-body[data-state='shop'] .shop-zone .product button.back{
+.shop-zone .product button.back{
   height: 0px;
   padding: 0px;
   border: 0px solid pink;
@@ -387,7 +391,7 @@ body[data-state='shop'] .shop-zone .product button.back{
   transition: height .1s linear, padding .1s linear, border .1s linear;
 }
 
-body[data-state='shop'] .shop-zone .product[data-status='active'] button.back{
+.shop-zone .product[data-status='active'] button.back{
   position: relative;
   overflow: visible;
   height: 24px;
@@ -396,7 +400,7 @@ body[data-state='shop'] .shop-zone .product[data-status='active'] button.back{
   margin-left: 16px;
 }
 
-body[data-state='shop'] .shop-zone .product[data-status='active'] button.back::after{
+.shop-zone .product[data-status='active'] button.back::after{
   content: '';
   position: absolute;
   top: 4px; left: -8px;
@@ -404,7 +408,7 @@ body[data-state='shop'] .shop-zone .product[data-status='active'] button.back::a
   transform: rotate(45deg);
 }
 
-body[data-state='shop'] .shop-zone .product button.product-image{
+.shop-zone .product button.product-image{
   width: 100%;
   height: 100%;
   background: none;
@@ -412,9 +416,9 @@ body[data-state='shop'] .shop-zone .product button.product-image{
   border-radius: 4px;
 }
 
-body[data-state='shop'] .shop-zone .product[data-status='hidden']{ display: none }
+.shop-zone .product[data-status='hidden']{ display: none }
 
-body[data-current='krill'][data-state='shop'] .shop-zone .product[data-status='active'] { border-bottom: none }
+body[data-current='krill'] .shop-zone .product[data-status='active'] { border-bottom: none }
 
 .shop-zone .product svg .s{
   stroke-width: 5px;
@@ -430,6 +434,8 @@ body[data-current='krill'][data-state='shop'] .shop-zone .product[data-status='a
   padding: 16px 0 64px 0;
   font-family: sans-serif;
 }
+
+body[data-state='home'] .shop-zone .product .info{ display: none }
 
 .shop-zone .product .info h3{
   font-family: 'Varela Round', sans-serif;
