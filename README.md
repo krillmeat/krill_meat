@@ -1,6 +1,8 @@
 # KRILL MEAT
 This is my personal website for my illustration
 
+[**Link to Notion Project**](https://www.notion.so/Krill-Meat-fb93fea8fa414f48acf0b1571e0c9c66)
+
 ## FEATURES
 This page utilized quite a bit of different JS to make things work. The page itself has a lot of built-in JS, but I also built some custom Plugins to make things happen:
 
