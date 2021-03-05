@@ -31,6 +31,10 @@ class SVGSTAGE{
     // Append the Doodle Element to the Stage and set the Doodle to the first one in the list
     this.stageElem.appendChild(this.doodleElem);
     this.switchSvg(this.doodleNames[0]);
+
+    // Mobile Point Doodle Selector
+    document.querySelector(".mobile-selector button.right").addEventListener("click",function(){this.eventCallback({direction:"right"})}.bind(this));
+    document.querySelector(".mobile-selector button.left").addEventListener("click",function(){this.eventCallback({direction:"left"})}.bind(this));
   }
 
   /**
@@ -88,8 +92,8 @@ class SVGSTAGE{
 
     // Change the Mobile Selector Dots to show the correctly selected Doodle
     let mobileSelector = document.querySelector(".doodle-selector .mobile-selector");
-        mobileSelector.querySelector("button[data-status='selected']").dataset.status = "";
-        mobileSelector.querySelectorAll("button")[this.currentSlideIndex].dataset.status = "selected";
+        mobileSelector.querySelector("ul button[data-status='selected']").dataset.status = "";
+        mobileSelector.querySelectorAll("ul button")[this.currentSlideIndex].dataset.status = "selected";
 
     this.stageElem.appendChild(doodleElem);
   }

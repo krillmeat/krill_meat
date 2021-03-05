@@ -2,6 +2,7 @@
  * TOUCH SWIPE
  * ----------------------------------------------------------------------
  * A very low-weight Class that creates a Swipe Event Handler on an HTML Element
+ * TODO - Figure out how to handle Mouse Events alongside this
  * ----------------------------------------------------------------------
  * @param {Node}      elem            Element that listens for the Swipe Functionality
  * @param {Node}      slideElem       Element that slides when the Event is Triggered
@@ -44,8 +45,7 @@ class TOUCHSWIPE{
    */
   touchStartHandle(e){
     debug?.debugLog("EVENT [touchstart] :: Start point = "+e.touches[0].clientX+" , "+e.touches[0].clientY);
-
-    // Clear existing Deltas and Set the Starting Point
+    
     this.moveDelta = [0,0];
     this.startCoordinates = [e.touches[0].clientX,e.touches[0].clientY];
   }

@@ -10,8 +10,8 @@ body[data-current='krill'] nav.top .cart-container .item-count{ background: #4E0
 body[data-current='krill'] nav.top .cart-container .item-count::before { background: #4E000C }
 body[data-current='krill'] svg .s{ stroke: #4E000C }
 body[data-current='krill'] svg .f{ fill: #4E000C }
-body[data-current='krill'] nav.doodle-selector ul.mobile-selector li button{ color: #4E000C }
-body[data-current='krill'] nav.doodle-selector ul.mobile-selector li button[data-status='selected']{ border: 4px solid #4E000C }
+body[data-current='krill'] nav.doodle-selector .mobile-selector ul li button{ color: #4E000C }
+body[data-current='krill'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #4E000C }
 body[data-current='krill'] .shop-zone::-webkit-scrollbar-thumb{ background: #4E000C }
 body[data-current='krill'] .to-shop{ background: #EC0927 }
 body[data-current='krill'] .shop-zone .product { border-bottom: 4px solid #4E000C }
@@ -28,8 +28,8 @@ body[data-current='worm'] nav.top .cart-container .item-count{ background: #001C
 body[data-current='worm'] nav.top .cart-container .item-count::before { background: #001C4A }
 body[data-current='worm'] svg .s{ stroke: #001C4A }
 body[data-current='worm'] svg .f{ fill: #001C4A }
-body[data-current='worm'] nav.doodle-selector ul.mobile-selector li button{ color: #001C4A }
-body[data-current='worm'] nav.doodle-selector ul.mobile-selector li button[data-status='selected']{ border: 4px solid #001C4A }
+body[data-current='worm'] nav.doodle-selector .mobile-selector ul li button{ color: #001C4A }
+body[data-current='worm'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #001C4A }
 body[data-current='worm'][data-state='shop'] .shop-zone .product { border: 5px solid #001C4A; border-radius: 4px; }
 
 body[data-current='sunshine']{ background: #FFBF00 }
@@ -37,8 +37,8 @@ body[data-current='sunshine'] nav.top .cart-container .item-count{ background: #
 body[data-current='sunshine'] nav.top .cart-container .item-count::before { background: #4E3C00 }
 body[data-current='sunshine'] svg .s{ stroke: #4E3C00 }
 body[data-current='sunshine'] svg .f{ fill: #4E3C00 }
-body[data-current='sunshine'] nav.doodle-selector ul.mobile-selector li button{ color: #4E3C00 }
-body[data-current='sunshine'] nav.doodle-selector ul.mobile-selector li button[data-status='selected']{ border: 4px solid #4E3C00 }
+body[data-current='sunshine'] nav.doodle-selector .mobile-selector ul li button{ color: #4E3C00 }
+body[data-current='sunshine'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #4E3C00 }
 body[data-current='sunshine'][data-state='shop'] .shop-zone .product { border: 5px solid #4E3C00; border-radius: 4px; }
 
 body[data-current='smiles']{ background: #FF4A1C }
@@ -46,6 +46,6 @@ body[data-current='smiles'] nav.top .cart-container .item-count{ background: #53
 body[data-current='smiles'] nav.top .cart-container .item-count::before { background: #531200 }
 body[data-current='smiles'] svg .s{ stroke: #531200 }
 body[data-current='smiles'] svg .f{ fill: #531200 }
-body[data-current='smiles'] nav.doodle-selector ul.mobile-selector li button{ color: #531200 }
-body[data-current='smiles'] nav.doodle-selector ul.mobile-selector li button[data-status='selected']{ border: 4px solid #531200 }
+body[data-current='smiles'] nav.doodle-selector .mobile-selector ul li button{ color: #531200 }
+body[data-current='smiles'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #531200 }
 body[data-current='smiles'][data-state='shop'] .shop-zone .product { border: 5px solid #531200; border-radius: 4px; }

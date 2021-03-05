@@ -30,12 +30,16 @@
 
   <!-- Doodle Selector -->
   <nav class='doodle-selector'>
-    <ul class='mobile-selector'>
-      <li><button data-status='selected'>&bull;</button></li>
-      <li><button>&bull;</button></li>
-      <li><button>&bull;</button></li>
-      <li><button>&bull;</button></li>
-    </ul>
+    <div class='mobile-selector'>
+      <button class='left'><svg viewBox="0 0 500 500" data-type='svg' data-link='pointer'></svg></button>
+      <ul>
+        <li><button data-status='selected'>&bull;</button></li>
+        <li><button>&bull;</button></li>
+        <li><button>&bull;</button></li>
+        <li><button>&bull;</button></li>
+      </ul>
+      <button class='right'><svg viewBox="0 0 500 500" data-type='svg' data-link='pointer'></svg></button>
+    </div>
     <ul class='desktop-selector'>
       <li><button value='center-logo'><img src='MEDIA/krill-icon.svg'/></button></li>
       <li><button value='worm-image'><img src='MEDIA/worm-icon.svg'/></button></li>

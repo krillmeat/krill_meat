@@ -141,7 +141,7 @@ body[data-state='shop'] .draw-zone{
   padding-top: 12vh;
 }
 
-body[data-state='shop'] nav.doodle-selector ul.mobile-selector{ top: 8vh; transform: scale(.75) }
+body[data-state='shop'] nav.doodle-selector .mobile-selector ul{ top: 8vh; transform: scale(.75) }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::                                                                         ::::::::::::::::::::
@@ -155,7 +155,7 @@ body[data-state='shop'] nav.doodle-selector ul.mobile-selector{ top: 8vh; transf
     align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 500px;
+  max-width: 350px;
   margin: 0 auto;
 
   transition: transform .2s linear;
@@ -166,6 +166,12 @@ body[data-state='shop'] nav.doodle-selector ul.mobile-selector{ top: 8vh; transf
     align-items: center;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 700px){
+  .draw-zone .doodle{
+    max-width: 500px;
+  }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -197,7 +203,7 @@ body[data-state='shop'] nav.doodle-selector ul.mobile-selector{ top: 8vh; transf
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-::::::::::::::::::::  SMILES                                                               ::::::::::::::::::::
+::::::::::::::::::::  SMILES                                                                 ::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 .draw-zone .doodle[data-current='smiles'] svg .s{
   stroke-width: 12px;
@@ -212,6 +218,10 @@ body[data-state='shop'] nav.doodle-selector ul.mobile-selector{ top: 8vh; transf
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 nav.doodle-selector{ position: relative }
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::  DESKTOP SELECTOR                                                       ::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 nav.doodle-selector ul.desktop-selector{
     top:0px; left: 0px;
@@ -244,7 +254,11 @@ nav.doodle-selector ul.desktop-selector ul li button img{
     width: 100%;
 }
 
-nav.doodle-selector ul.mobile-selector{
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::  MOBILE SELECTOR                                                        ::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+nav.doodle-selector .mobile-selector ul{
   position: fixed;
     align-items: center;
   top: 20vh; left: 0px;
@@ -253,9 +267,9 @@ nav.doodle-selector ul.mobile-selector{
   width: 100%;
 }
 
-nav.doodle-selector ul.mobile-selector li{ margin: 0 4px }
+nav.doodle-selector .mobile-selector ul li{ margin: 0 4px }
 
-nav.doodle-selector ul.mobile-selector li button{
+nav.doodle-selector .mobile-selector ul li button{
   border: none;
   background: none;
   font-size: 2em;
@@ -266,12 +280,62 @@ nav.doodle-selector ul.mobile-selector li button{
   line-height: .4;
 }
 
-nav.doodle-selector ul.mobile-selector li button:hover{
+nav.doodle-selector .mobile-selector ul li button:hover{
   animation: jiggleSvg .2s linear 0s infinite;
 }
 
-nav.doodle-selector ul.mobile-selector li button[data-status='selected']{
+nav.doodle-selector .mobile-selector ul li button[data-status='selected']{
   padding-top: 0;
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::  MOBILE SELECTOR - ARROWS                                               ::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+
+nav.doodle-selector .mobile-selector button.left,
+nav.doodle-selector .mobile-selector button.right{
+  position: fixed;
+  top: calc(72vh - 32px);
+  padding: 2px;
+  background: none;
+  border: none;
+  transition: top .2s linear;
+  z-index: 999;
+}
+
+body[data-state='shop'] nav.doodle-selector .mobile-selector button.left,
+body[data-state='shop'] nav.doodle-selector .mobile-selector button.right{
+  top: calc(22vh - 32px);
+}
+
+nav.doodle-selector .mobile-selector button.left svg,
+nav.doodle-selector .mobile-selector button.right svg{
+  width: 48px;
+}
+
+nav.doodle-selector .mobile-selector button.left svg *,
+nav.doodle-selector .mobile-selector button.right svg *{
+  stroke-width: 24px;
+}
+
+nav.doodle-selector .mobile-selector button.left{
+  left: 32vw;
+  transform: scaleX(-1);
+}
+
+body[data-state='shop'] nav.doodle-selector .mobile-selector button.left{ left: 0px }
+body[data-state='shop'] nav.doodle-selector .mobile-selector button.right{ right: 0px }
+
+nav.doodle-selector .mobile-selector button.right{
+  right: 32vw;
+}
+
+@media (min-width: 500px){
+  nav.doodle-selector .mobile-selector button.left,
+  nav.doodle-selector .mobile-selector button.right{ top: calc(50vh - 32px); }
+  
+  nav.doodle-selector .mobile-selector button.left{ left: 0 }
+  nav.doodle-selector .mobile-selector button.right{ right: 0 }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
