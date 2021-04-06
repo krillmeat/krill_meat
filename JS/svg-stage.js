@@ -26,6 +26,7 @@ class SVGSTAGE{
    * ----------------------------------------------------------------------
    */
   init(){
+    let obj = this;
     if(debug && debug.debugOn) debug.debugLog("Enabling SVG Stage...");
     
     // Append the Doodle Element to the Stage and set the Doodle to the first one in the list
@@ -35,6 +36,11 @@ class SVGSTAGE{
     // Mobile Point Doodle Selector
     document.querySelector(".mobile-selector button.right").addEventListener("click",function(){this.eventCallback({direction:"right"})}.bind(this));
     document.querySelector(".mobile-selector button.left").addEventListener("click",function(){this.eventCallback({direction:"left"})}.bind(this));
+
+    let doodleButtons = document.querySelectorAll(".desktop-selector button");
+    for(let i = 0; i < doodleButtons.length; i++){
+      doodleButtons[i].addEventListener("click",function(e){obj.eventCallback({direction:"none", button: e.currentTarget})}.bind(obj));
+    }
   }
 
   /**
@@ -65,11 +71,16 @@ class SVGSTAGE{
     let newDoodleIndex = 0;
     if(callbackParams.direction === "left"){
       newDoodleIndex = this.currentSlideIndex === 0 ? this.doodleNames.length-1 : this.currentSlideIndex-1;
+      this.doodleElem.style.transform = "translateX(0px)"; // No matter what, reset the position of the Doodle Element
+      this.switchSvg(this.doodleNames[newDoodleIndex]);
     } else if(callbackParams.direction === "right"){
       newDoodleIndex = this.currentSlideIndex === this.doodleNames.length-1 ? 0 : this.currentSlideIndex+1;
+      this.doodleElem.style.transform = "translateX(0px)"; // No matter what, reset the position of the Doodle Element
+      this.switchSvg(this.doodleNames[newDoodleIndex]);
+    } else if(callbackParams.direction === "none"){ // For specifics
+      this.doodleElem.style.transform = "translateX(0px)"; // No matter what, reset the position of the Doodle Element
+      this.switchSvg(callbackParams.button.dataset.label);
     }
-    this.doodleElem.style.transform = "translateX(0px)"; // No matter what, reset the position of the Doodle Element
-    this.switchSvg(this.doodleNames[newDoodleIndex]);
   }
 
   /**

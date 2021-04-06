@@ -143,6 +143,16 @@ body[data-state='shop'] .draw-zone{
 
 body[data-state='shop'] nav.doodle-selector .mobile-selector ul{ top: 8vh; transform: scale(.75) }
 
+@media (min-width: 1250px){
+  .main-content{ 
+    flex-direction: row;
+    flex-wrap: wrap 
+  }
+  .draw-zone{ width: 50% }
+
+  body[data-state='shop'] .draw-zone{ height: 100vh }
+}
+
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::                                                                         ::::::::::::::::::::
 ::::::::::::::::::::  DOODLES                                                                ::::::::::::::::::::
@@ -224,34 +234,39 @@ nav.doodle-selector{ position: relative }
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 
 nav.doodle-selector ul.desktop-selector{
-    top:0px; left: 0px;
-    width: 100px;
-    height: 100%;
-        flex-direction: column;
-        justify-content: center;
-    display: none;
-    padding-bottom: 16px;
-    transform: scale(.8)
-}
-
-nav.doodle-selector ul.desktop-selector ul{
-    display: flex;
+  position: absolute;
+  top:0px; left: 0px;
+  width: 100px;
+  height: 100vh;
+  display: none;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  padding-bottom: 16px;
+  transform: scale(.8)
 }
 
-nav.doodle-selector ul.desktop-selector ul li button{
+nav.doodle-selector ul.desktop-selector li{
+
+}
+
+nav.doodle-selector ul.desktop-selector li button{
     padding: 8px;
     width: 90px; height: 90px;
     background: none;
     border: none;
 }
 
-nav.doodle-selector ul.desktop-selector ul li button:hover{
+nav.doodle-selector ul.desktop-selector li button:hover{
     animation: jiggleSvg .2s linear 0s infinite;
 }
 
-nav.doodle-selector ul.desktop-selector ul li button img{
+nav.doodle-selector ul.desktop-selector li button img{
     width: 100%;
+}
+
+@media (min-width: 1250px){
+  nav.doodle-selector ul.desktop-selector{ display: flex }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -315,7 +330,7 @@ nav.doodle-selector .mobile-selector button.right svg{
 
 nav.doodle-selector .mobile-selector button.left svg *,
 nav.doodle-selector .mobile-selector button.right svg *{
-  stroke-width: 24px;
+  stroke-width: 28px;
 }
 
 nav.doodle-selector .mobile-selector button.left{
@@ -336,6 +351,10 @@ nav.doodle-selector .mobile-selector button.right{
   
   nav.doodle-selector .mobile-selector button.left{ left: 0 }
   nav.doodle-selector .mobile-selector button.right{ right: 0 }
+}
+
+@media (min-width: 800px){
+  nav.doodle-selector .mobile-selector{ display: none }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -375,6 +394,18 @@ body[data-state='shop'] .shop-zone{
   height:68vh;
   margin: 0 8px 0 16px;
   overflow: scroll;
+}
+
+@media (min-width: 1250px){
+  .shop-zone{ width: 0%; height: 100%; transition: width .2s linear }
+  body[data-state='shop'] .shop-zone{
+    display: flex;
+      justify-content: space-between;
+    width: calc(49% - 24px);
+    height: 100%;
+    padding-top: 80px;
+    margin-left: 24px;
+  }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -488,6 +519,12 @@ body[data-current='krill'] .shop-zone .product[data-status='active'] { border-bo
   stroke-width: 5px;
   stroke-linejoin: round;
   stroke-linecap: round;
+}
+
+@media (min-width: 1250px){
+  .shop-zone .product{
+    width: calc(50% - 8px);
+  }
 }
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
