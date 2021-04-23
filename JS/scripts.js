@@ -65,6 +65,24 @@ function setupDebug(){
 }
 
 /**
+ * SETUP PRODUCT HEIGHTS
+ * ----------------------------------------------------------------------
+ * The product buttons need to be set to the correct height in order to make things good
+ * ----------------------------------------------------------------------
+ */
+function setupProductHeights(){
+  let productButtons = document.querySelectorAll(".product button.product-image");
+  
+  for(let i = 0; i < productButtons.length; i++){
+    let productImage = productButtons[i].querySelector("img");
+    let prodHeight = productImage.clientHeight + 8;
+
+    productButtons[i].parentElement.parentElement.style.height = prodHeight + "px";
+    productButtons[i].style.height = prodHeight + "px";
+  }
+}
+
+/**
  * GO TO PRODUCTS
  * ----------------------------------------------------------------------
  * Switches the page status to the Shop view
@@ -75,6 +93,7 @@ function setupDebug(){
 function gotoProducts(e){
   debug?.debugLog("EVENT [click] :: Go to Products...");
   document.body.dataset.state !== 'shop' ? document.body.dataset.state = "shop" : document.body.dataset.state = "home";
+  setupProductHeights();
 }
 
 /**
@@ -87,10 +106,12 @@ function gotoProducts(e){
  */
 function backtoProducts(e){
   document.querySelector(".shop-zone").dataset.state='shop';
+  document.querySelector(".point-to-shop").style.display = "flex";
   for(let product of document.querySelectorAll(".shop-zone .product")){
     product.style="";
     product.dataset.status = 'inactive';
   }
+  setupProductHeights();
 }
 
 /**
@@ -103,6 +124,8 @@ function backtoProducts(e){
  */
 function gotoProductInfo(e){
   debug?.debugLog("EVENT [click] :: Go to Product Info...");
+
+  document.querySelector(".point-to-shop").style.display = "none";
 
   let productParent = e.currentTarget.parentElement.parentElement;
   document.querySelector(".shop-zone").dataset.state='info';

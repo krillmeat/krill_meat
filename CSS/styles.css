@@ -353,7 +353,7 @@ nav.doodle-selector .mobile-selector button.right{
   nav.doodle-selector .mobile-selector button.right{ right: 0 }
 }
 
-@media (min-width: 800px){
+@media (min-width: 1250px){
   nav.doodle-selector .mobile-selector{ display: none }
 }
 
@@ -370,7 +370,7 @@ nav.doodle-selector .mobile-selector button.right{
   height: 0vh;
   margin: 0 8px 0 16px;
   overflow: hidden;
-  transition: height .2s linear;
+  /* transition: height .2s linear; */
 }
 
 .shop-zone::-webkit-scrollbar{
@@ -396,14 +396,25 @@ body[data-state='shop'] .shop-zone{
   overflow: scroll;
 }
 
-@media (min-width: 1250px){
-  .shop-zone{ width: 0%; height: 100%; transition: width .2s linear }
+@media (min-width: 675px){
   body[data-state='shop'] .shop-zone{
     display: flex;
-      justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1250px){
+  .shop-zone{ width: 0%; height: 100%;  }
+  body[data-state='shop'] .shop-zone{
+    justify-content: center;
+    flex-direction: column;
+
     width: calc(49% - 24px);
     height: 100%;
-    padding-top: 80px;
+    padding-top: 32px;
+    padding-right: 128px;
     margin-left: 24px;
   }
 }
@@ -437,10 +448,8 @@ body[data-state='shop'] .point-to-shop{ justify-content: flex-start }
   transition: all .1s linear;
 }
 
-@media (min-width: 800px){
-  .point-to-shop button:hover{
-    animation: pointerFinger .5s linear 0s infinite
-  }
+.point-to-shop button:focus{
+  outline: none;
 }
 
 body[data-state='shop'] .point-to-shop button{
@@ -457,6 +466,20 @@ stroke-width: 24px;
 stroke-linecap: round;
 }
 
+@media (min-width: 1250px){
+  .point-to-shop{
+    top: 64px;
+    bottom: initial;
+    left: initial;
+    right: 0px;
+    width: 128px;
+    height: calc(100% - 64px);
+  }
+
+  .point-to-shop button svg{ transform: rotate(0deg) }
+  body[data-state='shop'] .point-to-shop button{ transform: scaleX(-1) rotate(0deg) }
+}
+
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::                                                                         ::::::::::::::::::::
 ::::::::::::::::::::  PRODUCT                                                                ::::::::::::::::::::
@@ -466,11 +489,10 @@ stroke-linecap: round;
 .shop-zone .product{
   display: block;
   width: calc(100% - 8px);
-  height: 364px;
-  margin-bottom: 16px;
+  height: 100px;
   overflow: hidden;
 
-  transition: height .1s linear, padding-top .1s linear;
+  /* transition: height .1s linear, padding-top .1s linear; */
 }
 
 .shop-zone .product button.back{
@@ -483,7 +505,7 @@ stroke-linecap: round;
   font-size: .9em;
   text-transform: uppercase;
 
-  transition: height .1s linear, padding .1s linear, border .1s linear;
+  /* transition: height .1s linear, padding .1s linear, border .1s linear; */
 }
 
 .shop-zone .product[data-status='active'] button.back{
@@ -505,23 +527,25 @@ stroke-linecap: round;
 
 .shop-zone .product button.product-image{
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   background: none;
   padding: 0;
   border-radius: 4px;
+
+  background-size: cover;
+}
+
+.shop-zone .product button.product-image img{
+  width: 100%;
+  display: block;
+  opacity: 0;
 }
 
 .shop-zone .product[data-status='hidden']{ display: none }
 
 body[data-current='krill'] .shop-zone .product[data-status='active'] { border-bottom: none }
 
-.shop-zone .product svg .s{
-  stroke-width: 5px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-@media (min-width: 1250px){
+@media (min-width: 675px){
   .shop-zone .product{
     width: calc(50% - 8px);
   }

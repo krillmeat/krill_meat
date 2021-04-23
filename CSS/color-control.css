@@ -18,6 +18,10 @@ body[data-current='krill'] .shop-zone .product { border-bottom: 4px solid #4E000
 body[data-current='krill'] .shop-zone .product button.back { background: #4E000C; color: #EC0927 }
 body[data-current='krill'] .shop-zone .product button.back::after { background: #4E000C }
 body[data-current='krill'] .shop-zone .product button.product-image { border: 4px solid #4E000C }
+body[data-current='krill'] .shop-zone .product.shirt button.product-image { background-image: url('../MEDIA/MOCKUPS/krillmeat-logo-shirt.png') }
+body[data-current='krill'] .shop-zone .product.hat button.product-image { background-image: url('../MEDIA/MOCKUPS/main-logo-hat.jpg') }
+body[data-current='krill'] .shop-zone .product.poster button.product-image { background-image: url('../MEDIA/MOCKUPS/main-logo-poster.png') }
+body[data-current='krill'] .shop-zone .product.pin button.product-image { background-image: url('../MEDIA/MOCKUPS/krillmeat-main-logo-pin.jpg') }
 body[data-current='krill'][data-state='shop'] .shop-zone .product .info{ color: #4E000C }
 body[data-current='krill'][data-state='shop'] .shop-zone .product .info form button{ background: #4E000C; color: #EC0927 }
 body[data-current='krill'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input ~ label{ background: none; border: 2px solid #4E000C; color:#4E000C }
@@ -30,7 +34,17 @@ body[data-current='worm'] svg .s{ stroke: #001C4A }
 body[data-current='worm'] svg .f{ fill: #001C4A }
 body[data-current='worm'] nav.doodle-selector .mobile-selector ul li button{ color: #001C4A }
 body[data-current='worm'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #001C4A }
-body[data-current='worm'][data-state='shop'] .shop-zone .product { border: 5px solid #001C4A; border-radius: 4px; }
+body[data-current='worm'] .shop-zone .product { border-bottom: 4px solid #001C4A }
+body[data-current='worm'] .shop-zone .product button.back { background: #001C4A; color: #2E5EAA }
+body[data-current='worm'] .shop-zone .product button.back::after { background: #001C4A }
+body[data-current='worm'] .shop-zone .product button.product-image { border: 4px solid #001C4A }
+body[data-current='worm'] .shop-zone .product.shirt button.product-image { background-image: url('../MEDIA/MOCKUPS/krillmeat-worm-shirt.png') }
+body[data-current='worm'] .shop-zone .product.hat button.product-image { background-image: url('../MEDIA/MOCKUPS/worm-hat.jpg') }
+body[data-current='worm'] .shop-zone .product.poster button.product-image { background-image: url('../MEDIA/MOCKUPS/worm-poster.png') }
+body[data-current='worm'] .shop-zone .product.pin button.product-image { background-image: url('../MEDIA/MOCKUPS/worm-pin.jpg') }
+body[data-current='worm'][data-state='shop'] .shop-zone .product .info form button{ background: #001C4A; color: #2E5EAA }
+body[data-current='worm'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input ~ label{ background: none; border: 2px solid #001C4A; color:#001C4A }
+body[data-current='worm'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input:checked + label{ background: #001C4A; color:#2E5EAA }
 
 body[data-current='sunshine']{ background: #FFBF00 }
 body[data-current='sunshine'] nav.top .cart-container .item-count{ background: #4E3C00; color: #FFBF00 }
@@ -39,7 +53,17 @@ body[data-current='sunshine'] svg .s{ stroke: #4E3C00 }
 body[data-current='sunshine'] svg .f{ fill: #4E3C00 }
 body[data-current='sunshine'] nav.doodle-selector .mobile-selector ul li button{ color: #4E3C00 }
 body[data-current='sunshine'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #4E3C00 }
-body[data-current='sunshine'][data-state='shop'] .shop-zone .product { border: 5px solid #4E3C00; border-radius: 4px; }
+body[data-current='sunshine'] .shop-zone .product { border-bottom: 4px solid #4E3C00 }
+body[data-current='sunshine'] .shop-zone .product button.back { background: #4E3C00; color: #FFBF00 }
+body[data-current='sunshine'] .shop-zone .product button.back::after { background: #4E3C00 }
+body[data-current='sunshine'] .shop-zone .product button.product-image { border: 4px solid #4E3C00 }
+body[data-current='sunshine'] .shop-zone .product.shirt button.product-image { background-image: url('../MEDIA/MOCKUPS/krillmeat-sunshine-shirt.png') }
+body[data-current='sunshine'] .shop-zone .product.hat button.product-image { background-image: url('../MEDIA/MOCKUPS/sunshine-hat.jpg') }
+body[data-current='sunshine'] .shop-zone .product.poster button.product-image { background-image: url('../MEDIA/MOCKUPS/sunshine-poster.png') }
+body[data-current='sunshine'] .shop-zone .product.pin button.product-image { background-image: url('../MEDIA/MOCKUPS/sunshine-pin.jpg') }
+body[data-current='sunshine'][data-state='shop'] .shop-zone .product .info form button{ background: #4E3C00; color: #FFBF00 }
+body[data-current='sunshine'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input ~ label{ background: none; border: 2px solid #4E3C00; color:#4E3C00 }
+body[data-current='sunshine'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input:checked + label{ background: #4E3C00; color:#FFBF00 }
 
 body[data-current='smiles']{ background: #FF4A1C }
 body[data-current='smiles'] nav.top .cart-container .item-count{ background: #531200; color: #FF4A1C }
@@ -48,4 +72,14 @@ body[data-current='smiles'] svg .s{ stroke: #531200 }
 body[data-current='smiles'] svg .f{ fill: #531200 }
 body[data-current='smiles'] nav.doodle-selector .mobile-selector ul li button{ color: #531200 }
 body[data-current='smiles'] nav.doodle-selector .mobile-selector ul li button[data-status='selected']{ border: 4px solid #531200 }
-body[data-current='smiles'][data-state='shop'] .shop-zone .product { border: 5px solid #531200; border-radius: 4px; }
+body[data-current='smiles'] .shop-zone .product { border-bottom: 4px solid #531200 }
+body[data-current='smiles'] .shop-zone .product button.back { background: #531200; color: #FF4A1C }
+body[data-current='smiles'] .shop-zone .product button.back::after { background: #531200 }
+body[data-current='smiles'] .shop-zone .product button.product-image { border: 4px solid #531200 }
+body[data-current='smiles'] .shop-zone .product.shirt button.product-image { background-image: url('../MEDIA/MOCKUPS/krillmeat-smile-shirt.png') }
+body[data-current='smiles'] .shop-zone .product.hat button.product-image { background-image: url('../MEDIA/MOCKUPS/smile-hat.jpg') }
+body[data-current='smiles'] .shop-zone .product.poster button.product-image { background-image: url('../MEDIA/MOCKUPS/smile-poster.png') }
+body[data-current='smiles'] .shop-zone .product.pin button.product-image { background-image: url('../MEDIA/MOCKUPS/smile-pin.jpg') }
+body[data-current='smiles'][data-state='shop'] .shop-zone .product .info form button{ background: #531200; color: #FF4A1C }
+body[data-current='smiles'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input ~ label{ background: none; border: 2px solid #531200; color:#531200 }
+body[data-current='smiles'][data-state='shop'] .shop-zone .product .info form fieldset.sizes input:checked + label{ background: #531200; color:#FFBF00 }
